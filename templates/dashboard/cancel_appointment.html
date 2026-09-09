@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="dashboard-shell">
+    {% include 'dashboard/_sidebar.html' %}
+    <div class="main-panel">
+        <div class="card-soft p-4">
+                <h3 class="fw-bold mb-3">Cancel Appointment</h3>
+                <form method="post">
+                    {% csrf_token %}
+                    <div class="mb-3">
+                        <label class="form-label">Reason</label>
+                        <textarea class="form-control" name="reason"></textarea>
+                    </div>
+                    <button class="btn btn-danger" type="submit">Cancel Appointment</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

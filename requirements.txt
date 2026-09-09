@@ -1,0 +1,14 @@
+# Core Django stack
+Django==6.1
+asgiref==3.12.1
+sqlparse==0.5.5
+
+# Utilities
+python-dotenv==1.2.2
+idna==3.18
+packaging==26.3
+typing_extensions==4.16.0
+tzdata==2026.3
+
+# Static files serving (production)
+whitenoise==6.9.0

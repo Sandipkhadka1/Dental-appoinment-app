@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="dashboard-shell">
+    {% include 'dashboard/_sidebar.html' %}
+    <div class="main-panel">
+        <div class="card-soft p-4">
+                <h3 class="fw-bold mb-3">Reschedule Appointment</h3>
+                <form method="post">
+                    {% csrf_token %}
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                            <label class="form-label">Date</label>
+                            <input class="form-control" type="date" name="appointment_date" value="{{ selected_date }}" required>
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label">Time</label>
+                            {% if available_slots %}
+                                <select class="form-select" name="start_time" required>
+                                    <option value="">Select an available time</option>
+                                    {% for slot in available_slots %}
+                                        <option value="{{ slot }}" {% if slot == selected_start_time %}selected{% endif %}>{{ slot }}</option>
+                                    {% endfor %}
+                                </select>
+                            {% else %}
+                                <div class="form-text text-danger">No available slots for the selected date. Please choose another date.</div>
+                                <input class="form-control" type="time" name="start_time" disabled>
+                            {% endif %}
+                        </div>
+                    </div>
+                    <button class="btn btn-primary mt-3" type="submit">Reschedule</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
