@@ -7,6 +7,7 @@ from pathlib import Path
 
 from dotenv import load_dotenv
 
+#loaded env from .env file 
 load_dotenv()
 
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -15,8 +16,7 @@ SECRET_KEY = os.getenv('SECRET_KEY', 'django-insecure-change-me')
 DEBUG = os.getenv('DEBUG', 'True').lower() in {'1', 'true', 'yes'}
 ALLOWED_HOSTS = ['*']
 CSRF_TRUSTED_ORIGINS = [
-    "https://*.onrender.com",
-    "https://*.biwaspudasaini.com.np",
+ '*'
 ]
 
 INSTALLED_APPS = [
@@ -110,10 +110,10 @@ AUTH_USER_MODEL = 'accounts.User'
 EMAIL_BACKEND = os.getenv('EMAIL_BACKEND', 'django.core.mail.backends.smtp.EmailBackend')
 EMAIL_HOST = os.getenv('EMAIL_HOST', 'smtp.gmail.com')
 EMAIL_PORT = int(os.getenv('EMAIL_PORT', '587'))
-EMAIL_HOST_USER = os.getenv('EMAIL_HOST_USER', 'uniquebiwas@gmail.com')
-EMAIL_HOST_PASSWORD = os.getenv('EMAIL_HOST_PASSWORD', 'qwep ewxn vcov bxif')
+EMAIL_HOST_USER = os.getenv('EMAIL_HOST_USER', 'sandipkhadka9810@gmail.com')
+EMAIL_HOST_PASSWORD = os.getenv('EMAIL_HOST_PASSWORD', 'whsp sauq wrns unvc')
 EMAIL_USE_TLS = os.getenv('EMAIL_USE_TLS', 'True').lower() in {'1', 'true', 'yes'}
-DEFAULT_FROM_EMAIL = os.getenv('DEFAULT_FROM_EMAIL', 'uniquebiwas@gmail.com')
+DEFAULT_FROM_EMAIL = os.getenv('DEFAULT_FROM_EMAIL', 'sandipkhadka9810@gmail.com')
 
 LOGGING = {
     'version': 1,
