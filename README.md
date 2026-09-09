@@ -2,7 +2,7 @@
 
 This project has been trimmed down to a smaller, working MVP version of the dental clinic system. It focuses on the core workflow only and intentionally excludes the more advanced modules that were not needed for the first delivery.
 
-## Included in this 60% version
+## Almost 60% Completed
 
 - User accounts and login/register flow
 - Patient management
@@ -10,7 +10,7 @@ This project has been trimmed down to a smaller, working MVP version of the dent
 - Appointment booking and basic dashboard views
 - Admin controls for users and approvals
 
-## Removed from the active scope
+## Not from the active scope
 
 - Service catalog features
 - Reminder management module
